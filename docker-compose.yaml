@@ -40,6 +40,21 @@ services:
     links:
      - kafka
      - mysql
+  druid:
+    image: fokkodriesprong/docker-druid
+    ports:
+      - 8081:8081
+      - 8082:8082
+    depends_on:
+      - kafka
+    links:
+      - kafka
+  superset:
+    image: fokkodriesprong/docker-superset
+    ports:
+      - 8088:8088
+    links:
+        - druid
     environment:
      - BOOTSTRAP_SERVERS=kafka:9092
      - GROUP_ID=1
