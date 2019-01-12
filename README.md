@@ -72,19 +72,19 @@ Following picture shows architecture of this application:
 
 Execute following steps to run the application:
 
-1. Run bank application complete infrastructure:
+1. _Run bank application complete infrastructure:_
 
     docker-compose up
 
-2. Instruct Kafka Connect to tail transaction log of MySQL DB  and start sending messages as CDC to Kafka:
+2. _Instruct Kafka Connect to tail transaction log of MySQL DB  and start sending messages as CDC to Kafka:_
 
     curl -i -X POST -H "Accept:application/json" -H  "Content-Type:application/json" http://localhost:8083/connectors/ -d @mysqlsource.json --verbose
 
-3. Money withdrawal operation:
+3. _Money withdrawal operation:_
 
     curl http://localhost:8080/moneywithdrawals -X POST --header 'Content-Type: application/json' -d '{"debitCard":"123456789", "amount": 10.00}' --verbose
 
-4. Mini statement fetching operation (query/read model)
+4. _Mini statement fetching operation (query/read model)_
 
     curl http://localhost:8080/moneywithdrawals?debitCardId=123456789 --verbose
     
