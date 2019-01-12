@@ -73,6 +73,12 @@ Following picture shows architecture of this application:
 
 Execute following steps to run the application:
 
+- _Build bank app_
+    
+```bash
+    mvn clean install -DskipTests
+```
+
 - _Run bank application complete infrastructure:_
     
 ```bash
