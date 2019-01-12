@@ -4,7 +4,7 @@ CQRS & Event Sourcing are "THE BUZZ" words these days and how it fits in real ti
 
 ![alt text](./Cqrs.png)
 
-NOTE: CQRS + Event Sourcing = Elegant DDD
+**NOTE: CQRS + Event Sourcing = Elegant DDD**
 
 Event Souring -  “All changes to an application state are stored as a sequence of events.”  Martin Fowler
 - Change made to state are tracked as events
