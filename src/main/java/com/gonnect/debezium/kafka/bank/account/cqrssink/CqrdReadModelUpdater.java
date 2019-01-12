@@ -38,6 +38,8 @@ public class CqrdReadModelUpdater {
 
         }
 
+        log.info("Producing mini statement: " + miniStatement.toString());
+
         return miniStatement;
     }
 

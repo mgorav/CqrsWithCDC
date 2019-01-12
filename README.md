@@ -49,6 +49,9 @@ Following picture shows architecture of this application:
 ![alt text](./CQRSWithCDC.png)
 
 
+To demonstrate OLAP capabilities, this application write mini statement to Kafka topic - "ministatement". From this topic, Druid picks it up and provide fast querying abilities
+
+
 ## Pre-requisite
 
 1. _MySQL_
