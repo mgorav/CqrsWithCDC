@@ -7,9 +7,9 @@ A bank application which demonstrates CQRS design pattern. This application perf
 
 This application uses following two tables for above operations:
 
-1. debit_card
+1. _**debit_card**_
 
-2. money_withdrawal
+2. _**money_withdrawal**_
 
 A debit card withdrawl operation is stored in debit_card table. Once the transaciton is successfully committed in the debit_card table, using Debezium's & Kafka connect the CDC is moved to Kafka. Once the message arrive in Kafka topic, using Spring Cloud Stream Stream Listener, an entry in made to money_withdrawl table. This table is used to create mini statement (query)
 
@@ -23,19 +23,19 @@ Following picture shows architecture of this application:
 
 ## Pre-requisite
 
-1. MySQL
+1. _MySQL_
 
-2. Apache Kafka
+2. _Apache Kafka_
 
-3. Kafka Connect
+3. _Kafka Connect_
 
-4. Debezium
+4. _Debezium_
 
-5. Spring Cloud Stream
+5. _Spring Cloud Stream_
 
-6. Zookeeper
+6. _Zookeeper_
 
-7. Docker
+7. _Docker_
 
 **_NOTE_**: This application is completely dockerized.
 
