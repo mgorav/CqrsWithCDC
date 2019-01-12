@@ -73,25 +73,31 @@ Following picture shows architecture of this application:
 
 Execute following steps to run the application:
 
-1. _Run bank application complete infrastructure:_
+- _Run bank application complete infrastructure:_
     
 ```bash
     docker-compose up
 ```
 
-2. _Instruct Kafka Connect to tail transaction log of MySQL DB  and start sending messages as CDC to Kafka:_
+- _Instruct Kafka Connect to tail transaction log of MySQL DB  and start sending messages as CDC to Kafka:_
 
 ```bash    
     curl -i -X POST -H "Accept:application/json" -H  "Content-Type:application/json" http://localhost:8083/connectors/ -d @mysqlsource.json --verbose
 ```
 
-3. _Money withdrawal operation:_
+- _Instruct Druid connect with Kafka_
+
+```bash
+curl -XPOST -H'Content-Type: application/json' -d @bank-app-mini-statement-supervisor.json http://localhost:8081/druid/indexer/v1/supervisor
+```
+
+- _Money withdrawal operation:_
 
 ```bash    
     curl http://localhost:8080/moneywithdrawals -X POST --header 'Content-Type: application/json' -d '{"debitCard":"123456789", "amount": 10.00}' --verbose
 ```
 
-4. _Mini statement fetching operation (query/read model)_
+- _Mini statement fetching operation (query/read model)_
 
 ```bash   
     curl http://localhost:8080/moneywithdrawals?debitCardId=123456789 --verbose
