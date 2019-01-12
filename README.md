@@ -154,7 +154,7 @@ Following picture shows architecture of this application:
  **Snapshotting**
  Snapshotting is one of the key concepts in "Event Sourcing". Following diagram shows this:
  
- ![alt text](./Snapshotting.png)
+ ![alt text](./EventSourcingSnapshotting.png)
  
  **Event sourcing/cqrs drawback**
  
