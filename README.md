@@ -2,11 +2,10 @@
 
 CQRS & Event Sourcing are "THE BUZZ" words these days and how it fits in real time analytics.
 
-But what is CQRS?. Well in a simple definition - "CQRS is software building pattern that works on separating the part of the application that changes the state of an application & part that queries state of an application"
 
 ![alt text](./Cqrs.png)
 
-What is an Event Souring -  “All changes to an application state are stored as a sequence of events.”  Martin Fowler
+Event Souring -  “All changes to an application state are stored as a sequence of events.”  Martin Fowler
 - Change made to state are tracked as events
 - Event are stored in event store (any database)
 - Use stored events and summation of all these events (always arrive in current state)
