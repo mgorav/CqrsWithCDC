@@ -33,6 +33,11 @@ Following picture shows architecture of this application:
 
 5. Spring Cloud Stream
 
+6. Zookeeper
+
+7. Docker
+
+**_NOTE_**: This application is completely dockerized.
 
 ## Run Application
 
