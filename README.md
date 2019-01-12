@@ -87,7 +87,7 @@ Following picture shows architecture of this application:
     
   
  # CQRS,Event Sourcing & Its Usage In Analytics Demystified
- _Before going in app, below are the key concepts:_
+ _In section some of key concepts of CQRS & Event Sourcing are explained along with it's usage in analytics_
  
  **Command Vs Event**
  
