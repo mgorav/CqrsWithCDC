@@ -14,8 +14,8 @@
           "dimensions": [
             "id",
             "amount",
-            "comment",
-            "debitCardId"
+            "debitCardId",
+            "transactionDate"
           ]
         }
       }
@@ -34,7 +34,7 @@
   },
   "ioConfig": {
     "topic": "ministatement",
-    "replicas": 2,
+    "replicas": 1,
     "taskDuration": "PT10M",
     "completionTimeout": "PT20M",
     "consumerProperties": {

@@ -4,12 +4,16 @@ import com.gonnect.debezium.kafka.bank.account.model.MoneyWithdrawal;
 import com.gonnect.debezium.kafka.bank.account.repository.MoneyWithdrawalRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.stream.annotation.StreamListener;
+import org.springframework.cloud.stream.messaging.Processor;
 import org.springframework.cloud.stream.messaging.Sink;
+import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import java.util.Date;
 
 import static org.springframework.cloud.stream.messaging.Sink.INPUT;
+import static org.springframework.cloud.stream.messaging.Source.OUTPUT;
 
 @Service
 @Slf4j
@@ -22,17 +26,26 @@ public class CqrdReadModelUpdater {
     }
 
     @StreamListener(INPUT)
-    public void handle(DebitCardCdcMessage message) {
+    @SendTo(OUTPUT)
+    public MiniStatement process(DebitCardCdcMessage message) {
+        MiniStatement miniStatement = new MiniStatement();
         if(message.isUpdate()) {
-            saveWithdrawalFrom(message);
+            MoneyWithdrawal moneyWithdrawal = saveWithdrawalFrom(message);
+           miniStatement.setId(moneyWithdrawal.getId());
+           miniStatement.setAmount(moneyWithdrawal.getAmount());
+           miniStatement.setDebitCardId(moneyWithdrawal.getDebitCardId());
+           miniStatement.setTransactionDate(new Date(System.currentTimeMillis()));
+
         }
+
+        return miniStatement;
     }
 
-    private void saveWithdrawalFrom(DebitCardCdcMessage message) {
+    private MoneyWithdrawal saveWithdrawalFrom(DebitCardCdcMessage message) {
         String debitCardId = message.getPayload().getBefore().getId();
         BigDecimal withdrawalAmount
                 = balanceAfter(message).subtract(balanceBefore(message));
-        moneyWithdrawalRepository.save(new MoneyWithdrawal(withdrawalAmount, debitCardId));
+        return moneyWithdrawalRepository.save(new MoneyWithdrawal(withdrawalAmount, debitCardId));
     }
 
     private BigDecimal balanceAfter(DebitCardCdcMessage message) {

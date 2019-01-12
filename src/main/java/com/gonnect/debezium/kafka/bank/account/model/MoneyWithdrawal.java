@@ -2,6 +2,7 @@ package com.gonnect.debezium.kafka.bank.account.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -10,6 +11,8 @@ import java.util.UUID;
 
 @Entity
 @NoArgsConstructor
+@Getter
+@Setter
 public class MoneyWithdrawal {
 
     @Id
