@@ -1,4 +1,4 @@
-# CQRS Using CDC
+# CQRS + Event Sourcing Using CDC
 
 CQRS & Event Sourcing are "THE BUZZ" words these days and how it fits in real time analytics.
 
@@ -23,6 +23,8 @@ The Change Data Capture (CDC) provides an easy mechanism to implement these. Fur
 5. Kafka 
 6. Real time streaming
 7. Spring Cloud Stream
+
+**The complete reference architecture implementation is dockerized. Hence it takes just few minutes to run this application locally or any cloud provider of your choice.**
 
 
 ## CQRS Bank Application - Using CQRS + Event Sourcing with Events relay using CDC
