@@ -28,9 +28,9 @@ The Change Data Capture (CDC) provides an easy mechanism to implement these. Fur
 ## CQRS Bank Application - Using CQRS + Event Sourcing with Events relay using CDC
 A bank application which demonstrates CQRS design pattern. This application performs following operations:
 
-1. Money withdrawal using debit card
+1. _Money withdrawal using debit card_
 
-2. List all the money withdrawal (mini bank statement)
+2. _List all the money withdrawal (mini bank statement)_
 
 This application uses following two tables for above operations:
 
