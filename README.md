@@ -26,7 +26,7 @@ The Change Data Capture (CDC) provides an easy mechanism to implement these. Fur
 7. Spring Cloud Stream
 
 
-## CQRS Bank Application - Using CQRS + Event Soiurcing with Events relay using CDC
+## CQRS Bank Application - Using CQRS + Event Sourcing with Events relay using CDC
 A bank application which demonstrates CQRS design pattern. This application performs following operations:
 
 1. Money withdrawal using debit card
