@@ -49,10 +49,10 @@ Following picture shows architecture of this application:
 
     curl -i -X POST -H "Accept:application/json" -H  "Content-Type:application/json" http://localhost:8083/connectors/ -d @source.json --verbose
 
-3. Money withdrawal:
+3. Money withdrawal operation:
 
     curl http://localhost:8080/moneywithdrawals -X POST --header 'Content-Type: application/json' -d '{"debitCard":"123456789", "amount": 10.00}' --verbose
 
-4. Verify using query model (read model)
+4. Mini statement fetching operation (query/read model)
 
     curl http://localhost:8080/moneywithdrawals?debitCardId=123456789 --verbose
