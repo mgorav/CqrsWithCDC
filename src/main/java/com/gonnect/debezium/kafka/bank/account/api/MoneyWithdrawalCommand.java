@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class MoneyWithdrawalMessage {
+public class MoneyWithdrawalCommand {
 
     private String debitCard;
     private BigDecimal amount;

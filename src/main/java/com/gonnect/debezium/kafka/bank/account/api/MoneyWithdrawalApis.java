@@ -24,8 +24,8 @@ public class MoneyWithdrawalApis {
     }
 
     @PostMapping
-    ResponseEntity withdraw(@RequestBody MoneyWithdrawalMessage moneyWithdrawalMessage) {
-        moneyWithdrawalService.withdraw(moneyWithdrawalMessage.getDebitCard(), moneyWithdrawalMessage.getAmount());
+    ResponseEntity withdraw(@RequestBody MoneyWithdrawalCommand moneyWithdrawalCommand) {
+        moneyWithdrawalService.withdraw(moneyWithdrawalCommand.getDebitCard(), moneyWithdrawalCommand.getAmount());
         return ResponseEntity.ok().build();
     }
 

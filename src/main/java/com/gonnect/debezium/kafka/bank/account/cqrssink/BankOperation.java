@@ -1,6 +1,6 @@
 package com.gonnect.debezium.kafka.bank.account.cqrssink;
 
-public class Envelope {
+public class BankOperation {
 
     private String op;
     private String ts_ms;
