@@ -86,7 +86,7 @@ Following picture shows architecture of this application:
     curl http://localhost:8080/moneywithdrawals?debitCardId=123456789 --verbose
     
   
- ## CQRS,Event Sourcing & Its Usage In Analytics Demystified
+ # CQRS,Event Sourcing & Its Usage In Analytics Demystified
  _Before going in app, below are the key concepts:_
  
  **Command Vs Event**
