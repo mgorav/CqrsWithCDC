@@ -24,8 +24,6 @@ The Change Data Capture (CDC) provides an easy mechanism to implement these. Fur
 6. Real time streaming
 7. Spring Cloud Stream
 
-**The complete reference architecture implementation is dockerized. Hence it takes just few minutes to run this application locally or any cloud provider of your choice.**
-
 
 ## CQRS Bank Application - Using CQRS + Event Sourcing with Events relay using CDC
 A bank application which demonstrates CQRS design pattern. This application performs following operations:
@@ -69,6 +67,10 @@ Following picture shows architecture of this application:
 **_NOTE_**: This application is completely dockerized.
 
 ## Run Application
+
+**The complete reference architecture implementation is dockerized. Hence it takes just few minutes to run this application locally or any cloud provider of your choice.**
+
+Execute following steps to run the application:
 
 1. Run bank application complete infrastructure:
 
