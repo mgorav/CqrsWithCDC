@@ -45,7 +45,7 @@ Following picture shows architecture of this application:
 
     docker-compose up
 
-2. Instruct Kafka Connect to tail transaction log of MySQL DB  and start sending message to Kafka:
+2. Instruct Kafka Connect to tail transaction log of MySQL DB  and start sending messages as CDC to Kafka:
 
     curl -i -X POST -H "Accept:application/json" -H  "Content-Type:application/json" http://localhost:8083/connectors/ -d @source.json --verbose
 
