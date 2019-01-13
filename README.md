@@ -66,7 +66,9 @@ To demonstrate OLAP capabilities, this application write mini statement to Kafka
 
 6. _Zookeeper_
 
-7. _Docker_
+7. Druid
+
+8. _Docker_
 
 **_NOTE_**: This application is completely dockerized.
 
