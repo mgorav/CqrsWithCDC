@@ -1,4 +1,4 @@
-# CQRS + Event Sourcing Using CDC
+# CQRS + Event Sourcing Using CDC + OLAP Using Druid
 
 CQRS & Event Sourcing are "THE BUZZ" words these days and how it fits in real time analytics. Microservices architecture causes segregation of applications (also called mushrooming of application landscape). This posses challenge for the Data Engineering teams. The proposed architecture (in the GitHub blog) demystifies CQRS + Event Sourcing in Real time analytics and hence bridges the gap between Full Stack Developers & Data Engineer. 
 
